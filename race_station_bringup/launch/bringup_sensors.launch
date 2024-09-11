@@ -6,14 +6,14 @@
 
     
     <!-- Bring up the Bluerobotics Pressure sensor -->
-    <!-- <include file="$(find race_station_bringup)/launch/include/bluerobotics_bar30.launch.xml">
+    <include file="$(find race_station_bringup)/launch/include/bluerobotics_bar30.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include>   -->
+    </include>  
 
     <!-- Bring up the Power Minotor  -->
-    <!-- <include file="$(find race_station_bringup)/launch/include/power_monitor.launch.xml">
+    <include file="$(find race_station_bringup)/launch/include/power_monitor.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include>   -->
+    </include>  
 
     <!-- Bring up GPS -->
     <!-- <include file="$(find race_bringup)/launch/include/gps_nmea.launch.xml">
@@ -24,9 +24,9 @@
     </include> -->
 
     <!-- Bringup computer monitor node-->
-    <!-- <include file="$(find race_station_bringup)/launch/include/monitor.launch.xml">
+    <include file="$(find race_station_bringup)/launch/include/monitor.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include> -->
+    </include>
     
     <include file="$(find race_station_bringup)/launch/include/science_sensors.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
