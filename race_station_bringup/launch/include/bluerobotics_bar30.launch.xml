@@ -15,7 +15,7 @@
     <node ns="$(arg robot_name)" pkg="bluerobotics_pressure" type="driver.py" 
           name="bluerobotics_pressure_node" output="screen">
 
-      <rosparam command="load" file="$(find race_station_config)/config/bluerobotcs_bar30.yaml"/>
+      <rosparam command="load" file="$(find race_station_config)/config/bluerobotics_bar30.yaml"/>
 
       <param name="frame_id" value="$(arg robot_name)/pressure"/>
     </node>

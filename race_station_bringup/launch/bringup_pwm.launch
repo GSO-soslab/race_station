@@ -2,7 +2,7 @@
 
 <launch>
 
-    <arg name="robot_name" default="race"/>
+    <arg name="robot_name" default="race_station"/>
 
     <!-- Bring up Pico MCU -->
     <!-- <include file="$(find race_bringup)/launch/include/pi_pico.launch.xml">
