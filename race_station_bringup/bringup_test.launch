@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="robot_name" default="race_station"/>
+
+
+</launch>

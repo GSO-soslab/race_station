@@ -1,0 +1,23 @@
+<launch>
+    <arg name="robot_name" default="changeme"/>
+
+
+    <node  ns="$(arg robot_name)" name="chl_node" pkg="science_sensor_drivers" type="cfluor_ros_node.py" output="screen">
+        <param name="mesurement_type" value="chlorophyll" />
+        <param name="port_name" value="/dev/ttyUSB2" />
+        <param name="baud_rate" value="9600"/>
+    </node>
+
+    <node  ns="$(arg robot_name)" name="turbidity_node" pkg="science_sensor_drivers" type="cfluor_ros_node.py" output="screen">
+        <param name="mesurement_type" value="turbidity" />
+        <param name="port_name" value="/dev/ttyUSB3" />
+        <param name="baud_rate" value="9600"/>
+    </node>
+
+    <node  ns="$(arg robot_name)" name="ctd_Node" pkg="science_sensor_drivers" type="rbr_legato_ros_node.py" output="screen">
+        <param name="mesurement_type" value="ctd" />
+        <param name="port_name" value="/dev/ttyUSB0" />
+        <param name="baud_rate" value="115200"/>
+    </node>
+
+</launch>
