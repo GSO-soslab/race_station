@@ -28,10 +28,13 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
     
-    <include file="$(find race_station_bringup)/launch/include/science_sensors.launch.xml">
+
+    <include file="$(find race_station_bringup)/launch/include/dwe_camera.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 
-    
+    <!-- <include file="$(find race_station_bringup)/launch/include/science_sensors.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include> -->
 
 </launch>
