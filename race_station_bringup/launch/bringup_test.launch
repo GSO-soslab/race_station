@@ -3,13 +3,13 @@
 <launch>
 
   <arg name="robot_name" default="race_station"/>
-  <!-- Bring up the microstrain ahrs  -->
-    <include file="$(find race_station_bringup)/launch/include/microstrain.launch.xml">
+      <!-- <include file="$(find race_station_bringup)/launch/include/science_sensors.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include> 
+    </include> -->
 
-   <!-- Bring up madgwick filter-->
-    <include file="$(find race_station_bringup)/launch/include/madgwick_filter.launch.xml">
+      <!-- Bring up the ROS TF  -->
+    <include file="$(find race_station_bringup)/launch/include/description.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include> 
+    </include>
+
 </launch>
