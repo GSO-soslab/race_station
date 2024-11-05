@@ -23,6 +23,16 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include> -->
 
+    <!-- Bring up the microstrain ahrs  -->
+    <include file="$(find alpha_img_bringup)/launch/include/microstrain.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include> 
+
+     <!-- Bring up madgwick filter-->
+    <include file="$(find alpha_img_bringup)/launch/include/madgwick_filter.launch.xml">
+        <arg name="robot_name" value="$(arg robot_name)"/>
+    </include> 
+    
     <!-- Bringup computer monitor node-->
     <include file="$(find race_station_bringup)/launch/include/monitor.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
@@ -33,8 +43,8 @@
         <arg name="robot_name" value="$(arg robot_name)"/>
     </include>
 
-    <!-- <include file="$(find race_station_bringup)/launch/include/science_sensors.launch.xml">
+    <include file="$(find race_station_bringup)/launch/include/science_sensors.launch.xml">
         <arg name="robot_name" value="$(arg robot_name)"/>
-    </include> -->
+    </include>
 
 </launch>

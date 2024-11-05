@@ -1,0 +1,25 @@
+
+<launch>
+
+    <arg name="robot_name" default="race_station"/>
+
+    <node ns="$(arg robot_name)" pkg="imu_filter_madgwick" type="imu_filter_node" 
+          name="madgwick_filter_node" output="screen">
+          
+        <param name = "world_frame" value="enu"/>
+        <param name = "gain" value = "0.4"/>
+        <param name = "mag_bias_x" value="0.0"/>
+        <param name = "mag_bias_y" value="-0.0"/>
+        <param name = "mag_bias_z" value="-0.0"/> 
+        <!-- <param name = "soft_iron_matrix" value=""/>  -->
+        <param name = "gyro_bias_x" value="-0.0"/>
+        <param name = "gyro_bias_y" value="-0.0"/>
+        <param name = "gyro_bias_z" value="0.0"/>
+        <param name = "accel_bias_x" value="0.0"/>
+        <param name = "accel_bias_y" value="0.0"/>
+        <param name = "accel_bias_z" value="-0.0"/>
+        <param name = "use_mag" value = "true" />
+        <param name = "publish_tf" value ="false"/>
+    </node>
+
+</launch>
