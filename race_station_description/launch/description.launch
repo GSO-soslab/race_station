@@ -11,6 +11,13 @@
       type="static_transform_publisher"
       args="-0.255 0.0 -0.06 0.0 0.0 -1.570796327 $(arg robot_name)/lumen_light $(arg robot_name)/microstrain_imu"/>
 
+    <node
+      ns="$(arg robot_name)"
+      name="light2usbl"
+      pkg="tf2_ros"
+      type="static_transform_publisher"
+      args="0.0 0.0 0.0 0.0 0.0 0.0 $(arg robot_name)/lumen_light $(arg robot_name)/usbl"/>
+
   <!-- <param
       name="$(arg robot_name)/robot_description"
       command="$(find xacro)/xacro '$(find race_station_description)/urdf/base.urdf.xacro'"/>
