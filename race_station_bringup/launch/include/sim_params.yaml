@@ -1,0 +1,15 @@
+/race_station/imu_driver_node:
+    ros__parameters:
+      roll_offset: 3.1415926
+      pitch_offset: 0.0
+      yaw_offset: 1.5707
+      roll_reverse: 1.0
+      pitch_reverse: -1.0
+      yaw_reverse: -1.0
+
+/race_station/modem_driver_node:
+    ros__parameters:
+      modem_received_topic: /race_station/stonefish/acomms/received_data
+      modem_send_topic: /race_station/stonefish/acomms/data_to_send
+      modem_received_bytearray_topic: /race_station/acomms/received_data_bytes
+      modem_send_bytearray_topic: /race_station/acomms/data_to_send_bytes

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<robot name="race_station">
+   <link name="nose_tip_link">
+   <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <!-- <visual>
+            <origin xyz="00.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://race_station_description/mesh/RACE_body.stl" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual> -->
+    </link>
+
+    
+    <link name="base_link"/>
+    <joint name="base_link" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="nose_tip_link"/>
+    </joint>
+
+    <link name="cg_link"/>
+    <joint name="cg_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="3.1415926 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="cg_link"/>
+    </joint>
+
+
+    <link name="imu"/>
+    <joint name="imu_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="imu"/>
+    </joint>
+
+    <link name="imu_sf"/>
+    <joint name="imu__sf_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="imu_sf"/>
+    </joint>
+
+    <link name="gps"/>
+    <joint name="gps_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="gps"/>
+    </joint>
+
+    <link name="pressure"/>
+    <joint name="pressure_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="pressure"/>
+    </joint>
+
+    <!-- <link name="cam1"/>
+    <joint name="cam1_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="cam1"/>
+    </joint>
+
+    <link name="cam2"/>
+    <joint name="cam2_joint" type="fixed">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="cam2"/>
+    </joint> -->
+
+    <link name="apriltag0"/>
+    <joint name="apriltag0_joint" type="fixed">
+        <origin xyz="1.2 0.4 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="apriltag0"/>
+    </joint>
+
+    <link name="apriltag1"/>
+    <joint name="apriltag1_joint" type="fixed">
+        <origin xyz="0.15 0.4 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="apriltag1"/>
+    </joint>
+
+    <link name="apriltag2"/>
+    <joint name="apriltag2_joint" type="fixed">
+        <origin xyz="1.4 0.4 -0.3" rpy="0.0 1.5707963 0.0"/>
+        <parent link="base_link"/>
+        <child link="apriltag2"/>
+    </joint>
+
+
+</robot>

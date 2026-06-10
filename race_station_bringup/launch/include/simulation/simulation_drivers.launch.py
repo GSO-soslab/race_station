@@ -1,0 +1,56 @@
+import os
+
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch_ros.actions import Node
+from launch.substitutions import LaunchConfiguration
+
+
+def generate_launch_description():
+    robot_name = 'race_station'
+    robot_bringup = robot_name + '_bringup'
+
+    robot_param_path = os.path.join(
+        get_package_share_directory(robot_bringup),
+        'config'
+        )
+
+    stonefish_driver_param_file = os.path.join(robot_param_path, 'sim_params.yaml') 
+
+    return LaunchDescription([
+        Node(
+            package="world_of_stonefish",
+            executable="imu_driver_node",
+            namespace=robot_name,
+            name="imu_driver_node",
+            remappings=[
+                    ('imu_in/data', 'imu/stonefish/data'),
+                    ('imu_out/data', 'ekf/imu/data'),
+                ],
+            parameters=[
+                {'frame_id': robot_name + '/imu_sf'},
+                stonefish_driver_param_file
+                ]
+        ),
+
+
+        Node(
+            package="world_of_stonefish",
+            executable="pressure_sensor_node",
+            namespace=robot_name,
+            name="pressure_sensor_node",
+            remappings=[
+                ('depth', 'depth/odometry')
+            ],
+            parameters=[
+                {'frame_id': robot_name + '/world'}]
+        ),
+
+        Node(
+            package="world_of_stonefish",
+            executable="modem_driver_node",
+            namespace=robot_name,
+            name="modem_driver_node",
+            parameters=[stonefish_driver_param_file],
+        ),
+    ])
