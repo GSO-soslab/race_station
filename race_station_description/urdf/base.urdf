@@ -71,21 +71,21 @@
 
     <link name="apriltag0"/>
     <joint name="apriltag0_joint" type="fixed">
-        <origin xyz="1.2 0.4 0.0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="1.1 0.4 0.0" rpy="0.0 0.0 1.5707963"/>
         <parent link="base_link"/>
         <child link="apriltag0"/>
     </joint>
 
     <link name="apriltag1"/>
     <joint name="apriltag1_joint" type="fixed">
-        <origin xyz="0.15 0.4 0.0" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.2 0.4 0.0" rpy="0.0 0.0 1.5707963"/>
         <parent link="base_link"/>
         <child link="apriltag1"/>
     </joint>
 
     <link name="apriltag2"/>
     <joint name="apriltag2_joint" type="fixed">
-        <origin xyz="1.4 0.4 -0.3" rpy="0.0 1.5707963 0.0"/>
+        <origin xyz="0.0 0.4 0.3" rpy="1.5707963 0.0 1.5707963"/>
         <parent link="base_link"/>
         <child link="apriltag2"/>
     </joint>

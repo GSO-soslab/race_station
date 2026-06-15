@@ -41,7 +41,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         simulation_drivers,
-        localization,
+        # localization,
         description,
-        mvp_c2_top,
+        # mvp_c2_top,
     ])
