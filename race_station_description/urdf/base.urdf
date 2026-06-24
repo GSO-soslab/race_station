@@ -90,5 +90,11 @@
         <child link="apriltag2"/>
     </joint>
 
+    <link name="dockpoint"/>
+    <joint name="dockpoint_joint" type="fixed">
+        <origin xyz="0.6 0.4 0.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="dockpoint"/>
+    </joint>
 
 </robot>
