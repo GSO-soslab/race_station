@@ -26,6 +26,12 @@
         <child link="cg_link"/>
     </joint>
 
+    <link name="dock_point"/>
+    <joint name="dock_point_joint" type="fixed">
+        <origin xyz="-0.415 0.33 -0.05" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="dock_point"/>
+    </joint>
 
     <link name="imu"/>
     <joint name="imu_joint" type="fixed">
@@ -129,7 +135,7 @@
     </joint>
 
     <!-- 8 x tag36h11 (4 cm) -->
-    <link name="apriltag36h11_2"/>
+    <!-- <link name="apriltag36h11_2"/>
     <joint name="apriltag36h11_2_joint" type="fixed">
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
@@ -183,13 +189,6 @@
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
         <parent link="base_link"/>
         <child link="apriltag36h11_9"/>
-    </joint>
-
-    <link name="dockpoint"/>
-    <joint name="dockpoint_joint" type="fixed">
-        <origin xyz="0.6 0.4 0.0" rpy="0.0 0.0 0.0"/>
-        <parent link="base_link"/>
-        <child link="dockpoint"/>
-    </joint>
+    </joint> -->
 
 </robot>
