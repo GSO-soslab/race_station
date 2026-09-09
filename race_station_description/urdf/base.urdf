@@ -89,21 +89,21 @@
     <!-- 3 x tag25h9 (27 cm) -->
     <link name="apriltag25h9_02"/>
     <joint name="apriltag25h9_02_joint" type="fixed">
-        <origin xyz="-0.81 0.0 -0.21" rpy="0.0 1.5707963 0.0"/>
+        <origin xyz="-0.81 0.0 -0.21" rpy="-1.5707963 0.0 -1.5707963"/>
         <parent link="dock_point"/>
         <child link="apriltag25h9_02"/>
     </joint>
 
     <link name="apriltag25h9_13"/>
     <joint name="apriltag25h9_13_joint" type="fixed">
-        <origin xyz="-0.26 0.37 -0.21" rpy="1.5707963 1.5707963 0.0"/>
+        <origin xyz="-0.26 0.37 -0.21" rpy="-1.5707963 0.0 3.1415926"/>
         <parent link="dock_point"/>
         <child link="apriltag25h9_13"/>
     </joint>
 
     <link name="apriltag25h9_17"/>
     <joint name="apriltag25h9_17_joint" type="fixed">
-        <origin xyz="-0.26 -0.37 -0.21" rpy="-1.5707963 1.5707963 0.0"/>
+        <origin xyz="-0.26 -0.37 -0.21" rpy="-1.5707963 0.0 0.0"/>
         <parent link="dock_point"/>
         <child link="apriltag25h9_17"/>
     </joint>
@@ -111,21 +111,22 @@
     <!-- 3 x tag36h11 (15 cm) -->
     <link name="apriltag36h11_146"/>
     <joint name="apriltag36h11_146_joint" type="fixed">
-        <origin xyz="0.430 0.0 0.405" rpy="0.0 1.5707963 0.0"/>
+        <!-- <origin xyz="0.430 0.0 0.405" rpy="0.0 1.5707963 0.0"/> -->
+        <origin xyz="0.430 0.0 0.405" rpy="-1.5707963 0.0 -1.5707963"/>
         <parent link="dock_point"/>
         <child link="apriltag36h11_146"/>
     </joint>
 
     <link name="apriltag36h11_176"/>
     <joint name="apriltag36h11_176_joint" type="fixed">
-        <origin xyz="0.0 0.25 -0.012" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.0 0.25 -0.012" rpy="3.1415926 0.0 -1.5707963"/>
         <parent link="dock_point"/>
         <child link="apriltag36h11_176"/>
     </joint>
 
     <link name="apriltag36h11_185"/>
     <joint name="apriltag36h11_185_joint" type="fixed">
-        <origin xyz="0.0 -0.25 -0.012" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.0 -0.25 -0.012" rpy="3.1415926 0.0 -1.5707963"/>
         <parent link="dock_point"/>
         <child link="apriltag36h11_185"/>
     </joint>
@@ -133,14 +134,14 @@
     <!-- 2 x tag36h11 (5 cm) -->
     <link name="apriltag36h11_541"/>
     <joint name="apriltag36h11_541_joint" type="fixed">
-        <origin xyz="0.470 0.0 0.160" rpy="0.0 1.5707963 0.0"/>
+        <origin xyz="0.470 0.0 0.160" rpy="-1.5707963 0.0 -1.5707963"/>
         <parent link="dock_point"/>
         <child link="apriltag36h11_541"/>
     </joint>
 
     <link name="apriltag36h11_558"/>
     <joint name="apriltag36h11_558_joint" type="fixed">
-        <origin xyz="0.470 0.0 0.095" rpy="0.0 1.5707963 0.0"/>
+        <origin xyz="0.470 0.0 0.095" rpy="-1.5707963 0.0 -1.5707963"/>
         <parent link="dock_point"/>
         <child link="apriltag36h11_558"/>
     </joint>
